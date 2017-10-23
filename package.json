@@ -1,9 +1,10 @@
 {
-  "name": "react-static-starter",
-  "version": "1.0.0",
+  "name": "heatherallard.ca",
+  "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "precommit": "lint-staged",
     "start": "react-static start",
     "build": "react-static build",
     "serve": "serve dist -p 3000"
@@ -19,7 +20,15 @@
     "react-static": "2.x.x"
   },
   "devDependencies": {
+    "eslint": "^4.9.0",
+    "eslint-config-prettier": "^2.6.0",
     "eslint-config-react-tools": "1.x.x",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.3.0",
+    "prettier": "^1.7.4",
     "serve": "^6.1.0"
+  },
+  "lint-staged": {
+    "*.{js,json,css,scss,jsx}": ["prettier --write", "git add"]
   }
 }
