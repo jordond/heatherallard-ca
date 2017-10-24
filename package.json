@@ -5,6 +5,9 @@
   "license": "MIT",
   "scripts": {
     "precommit": "lint-staged",
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "echo 'Not Implemented, please add tests'",
     "start": "react-static start",
     "build": "react-static build",
     "serve": "serve dist -p 3000"
@@ -23,12 +26,17 @@
     "eslint": "^4.9.0",
     "eslint-config-prettier": "^2.6.0",
     "eslint-config-react-tools": "1.x.x",
+    "eslint-plugin-json": "^1.2.0",
     "husky": "^0.14.3",
     "lint-staged": "^4.3.0",
     "prettier": "^1.7.4",
     "serve": "^6.1.0"
   },
   "lint-staged": {
-    "*.{js,json,css,scss,jsx}": ["prettier --write", "git add"]
+    "*.{js,json,css,scss,jsx}": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
   }
 }
