@@ -13,7 +13,7 @@
     "serve": "serve dist -p 3000"
   },
   "dependencies": {
-    "axios": "^0.16.2",
+    "axios": "^0.17.0",
     "glamor": "^2.20.40",
     "glamorous": "^4.9.7",
     "prop-types": "^15.6.0",
@@ -21,7 +21,7 @@
     "react-dom": "^16.0.0",
     "react-fade-in": "^0.1.5",
     "react-router": "^4.2.0",
-    "react-static": "2.x.x"
+    "react-static": "^3.0.5"
   },
   "devDependencies": {
     "eslint": "^4.9.0",
