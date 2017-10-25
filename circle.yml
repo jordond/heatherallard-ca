@@ -28,7 +28,6 @@ jobs:
           name: Maybe Deploy
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              cd ./dist
               npm install surge
-              ../node_modules/.bin/surge -- project ./dist
+              ./node_modules/.bin/surge --project ./dist
             fi
