@@ -4,8 +4,16 @@ import glamorous from "glamorous";
 import FadeIn from "react-fade-in";
 
 import Routes from "react-static-routes";
+import ReactGA from "react-ga";
 
 import "./app.css";
+
+ReactGA.initialize("UA-108609170-1");
+
+function logPageView() {
+  ReactGA.set({ page: window.location.pathname + window.location.search });
+  ReactGA.pageview(window.location.pathname + window.location.search);
+}
 
 const AppStyles = glamorous.div({
   fontSize: "16px",
@@ -26,7 +34,7 @@ const fadeIn = {
 };
 
 export default () => (
-  <Router>
+  <Router onUpdate={logPageView}>
     <FadeIn>
       <AppStyles className="container" style={fadeIn}>
         <div className="content">

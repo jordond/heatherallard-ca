@@ -20,6 +20,7 @@ export default {
   postRenderMeta: async html => ({
     glamorousData: renderStatic(() => html)
   }),
+  getSiteProps: async ({ dev }) => ({ dev }),
   Html: class CustomHtml extends Component {
     render() {
       const {
