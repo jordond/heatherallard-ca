@@ -45,7 +45,7 @@ const HomeContent = glamorous.div({
       }
     },
     "& p": {
-      margin: "-1em auto 1.5em",
+      margin: "-1em auto 1em",
       maxWidth: "21em",
       fontSize: "24px"
     }
@@ -62,7 +62,7 @@ export default getSiteProps(() => (
         work
       </p>
       <GhostButton
-        url="/resume.pdf"
+        url="https://github.com/jordond/heatherallard.ca/raw/develop/public/resume.pdf"
         text="view resume"
         width="100"
         hoverColor="fe6c3d"
