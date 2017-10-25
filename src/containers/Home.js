@@ -16,12 +16,12 @@ const HomeContent = glamorous.div({
     [mediaQueries.phone]: {
       marginTop: "-2em"
     },
-    color: "#202020",
+    color: "white",
     textAlign: "center",
     "& img": {
       display: "block",
       margin: "auto",
-      maxWidth: "40em"
+      maxWidth: "20em"
     },
     "& h1": {
       margin: "-0.1em auto",
@@ -34,7 +34,8 @@ const HomeContent = glamorous.div({
     },
     "& p": {
       margin: "-1em auto 1.5em",
-      maxWidth: "40em"
+      maxWidth: "40em",
+      fontSize: "18px"
     }
   }
 });
