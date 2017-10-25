@@ -45,7 +45,7 @@ const HomeContent = glamorous.div({
     },
     "& p": {
       margin: "-1em auto 1.5em",
-      maxWidth: "20em",
+      maxWidth: "21em",
       fontSize: "24px"
     }
   }
@@ -57,7 +57,7 @@ export default getSiteProps(() => (
       <img src={logoImage} alt="Heather Allard" />
       <h1>Under Construction</h1>
       <p>
-        exciting stuff coming soon!<br />in the mean time, check out some of my
+        exciting stuff coming soon!<br />In the mean time, check out some of my
         work
       </p>
       <Buttons />
