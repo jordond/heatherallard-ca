@@ -3,6 +3,7 @@ import { getSiteProps } from "react-static";
 import glamorous from "glamorous";
 
 import Buttons from "./home/buttons";
+import GhostButton from "./home/ghostButton";
 
 import logoImage from "../images/logo.svg";
 
@@ -60,6 +61,12 @@ export default getSiteProps(() => (
         exciting stuff coming soon!<br />In the mean time, check out some of my
         work
       </p>
+      <GhostButton
+        url="/resume.pdf"
+        text="view resume"
+        width="100"
+        hoverColor="fe6c3d"
+      />
       <Buttons />
     </div>
   </HomeContent>
