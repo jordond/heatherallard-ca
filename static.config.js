@@ -6,6 +6,7 @@ import withCssLoader from "react-static/lib/plugins/withCssLoader";
 import withFileLoader from "react-static/lib/plugins/withFileLoader";
 
 export default {
+  siteRoot: "https://heatherallard.ca",
   getRoutes: async () => [
     {
       path: "/",
@@ -19,7 +20,6 @@ export default {
   postRenderMeta: async html => ({
     glamorousData: renderStatic(() => html)
   }),
-  siteRoute: "http://heatherallard.ca",
   Html: class CustomHtml extends Component {
     render() {
       const {
