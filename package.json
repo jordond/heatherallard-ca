@@ -33,8 +33,10 @@
     "serve": "^6.1.0"
   },
   "lint-staged": {
+    "*.{js,json,jsx}": [
+      "eslint --fix"
+    ],
     "*.{js,json,css,scss,jsx}": [
-      "eslint --fix",
       "prettier --write",
       "git add"
     ]

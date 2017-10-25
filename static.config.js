@@ -44,5 +44,15 @@ export default {
       );
     }
   },
-  webpack: [withFileLoader, withCssLoader]
+  webpack: [
+    config => {
+      config.module.rules.push({
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        loader: "file-loader"
+      });
+      return config;
+    },
+    withFileLoader,
+    withCssLoader
+  ]
 };
