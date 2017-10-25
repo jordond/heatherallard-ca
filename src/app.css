@@ -18,3 +18,9 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.loading > img {
+  display: block;
+  margin: auto;
+  max-width: 40em;
+}

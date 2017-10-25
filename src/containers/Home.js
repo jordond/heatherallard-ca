@@ -41,7 +41,7 @@ const HomeContent = glamorous.div({
 
 export default getSiteProps(() => (
   <HomeContent>
-    <div className="content">
+    <div className="content loading">
       <img src={logoImage} alt="Heather Allard" />
       <h1>Under Construction</h1>
       <p>
