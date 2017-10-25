@@ -19,6 +19,7 @@ export default {
   postRenderMeta: async html => ({
     glamorousData: renderStatic(() => html)
   }),
+  siteRoute: "http://heatherallard.ca",
   Html: class CustomHtml extends Component {
     render() {
       const {
