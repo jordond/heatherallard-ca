@@ -12,30 +12,41 @@ const mediaQueries = {
 };
 
 const HomeContent = glamorous.div({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  height: "100%",
+  minHeight: "100%",
   "& .content": {
-    [mediaQueries.phone]: {
-      marginTop: "-2em"
+    marginTop: "-2em",
+    maxWidth: "100%",
+    [mediaQueries.desktop]: {
+      maxWidth: "50%",
+      marginTop: "0"
     },
     color: "white",
     textAlign: "center",
     "& img": {
       display: "block",
       margin: "auto",
+      marginBottom: "1em",
       maxWidth: "20em"
     },
     "& h1": {
       margin: "-0.1em auto",
       paddingBottom: "0.8em",
       textTransform: "uppercase",
-      fontSize: "8vw",
       [mediaQueries.desktop]: {
-        fontSize: "70px"
+        fontSize: "50px"
+      },
+      [mediaQueries.phone]: {
+        fontSize: "30px"
       }
     },
     "& p": {
       margin: "-1em auto 1.5em",
-      maxWidth: "40em",
-      fontSize: "18px"
+      maxWidth: "20em",
+      fontSize: "24px"
     }
   }
 });
@@ -46,12 +57,8 @@ export default getSiteProps(() => (
       <img src={logoImage} alt="Heather Allard" />
       <h1>Under Construction</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id risus
-        sed nisi lacinia sollicitudin. Suspendisse hendrerit massa ut hendrerit
-        porttitor. Integer vitae ante ac massa tempus maximus in in mauris.
-        Nulla a ex erat. Vestibulum vitae euismod tellus. Sed dignissim augue
-        est, ac bibendum felis elementum a. Nulla id blandit neque. Nullam non
-        enim nec arcu porttitor pharetra. Donec tristique at eros a semper.
+        exciting stuff coming soon!<br />in the mean time, check out some of my
+        work
       </p>
       <Buttons />
     </div>
