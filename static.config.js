@@ -49,7 +49,7 @@ export default {
   webpack: [
     config => {
       config.module.rules.push({
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        test: /\.(pdf|woff|woff2|eot|ttf|otf)$/,
         loader: "file-loader"
       });
       return config;
