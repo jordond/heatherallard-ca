@@ -13,16 +13,9 @@ const mediaQueries = {
 };
 
 const HomeContent = glamorous.div({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  height: "100%",
-  minHeight: "100%",
   "& .content": {
     marginTop: "-2em",
-    maxWidth: "100%",
     [mediaQueries.desktop]: {
-      maxWidth: "50%",
       marginTop: "0"
     },
     color: "white",
@@ -53,8 +46,8 @@ const HomeContent = glamorous.div({
 });
 
 export default getSiteProps(() => (
-  <HomeContent>
-    <div className="content loading">
+  <HomeContent className="home-wrapper">
+    <div className="content home-content">
       <img src={logoImage} alt="Heather Allard" />
       <h1>Under Construction</h1>
       <p>
