@@ -6,7 +6,6 @@ import Buttons from "./home/buttons";
 import GhostButton from "./home/ghostButton";
 
 import logoImage from "../images/logo.svg";
-import resumePDF from "../images/resume.pdf";
 
 const mediaQueries = {
   phone: "@media only screen and (max-width: 400px)",
@@ -63,7 +62,7 @@ export default getSiteProps(() => (
         work
       </p>
       <GhostButton
-        url={resumePDF}
+        url="https://github.com/jordond/heatherallard.ca/raw/develop/public/resume.pdf"
         text="view resume"
         width="100"
         hoverColor="fe6c3d"
