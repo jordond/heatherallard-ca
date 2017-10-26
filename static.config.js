@@ -6,7 +6,7 @@ import withCssLoader from "react-static/lib/plugins/withCssLoader";
 import withFileLoader from "react-static/lib/plugins/withFileLoader";
 
 export default {
-  siteRoot: "http://heatherallard.ca",
+  siteRoot: "http://staging.heatherallard.ca",
   getRoutes: async () => [
     {
       path: "/",
