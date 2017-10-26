@@ -20,6 +20,7 @@ export default {
   postRenderMeta: async html => ({
     glamorousData: renderStatic(() => html)
   }),
+  getSiteProps: async ({ dev }) => ({ dev }),
   Html: class CustomHtml extends Component {
     render() {
       const {
@@ -48,7 +49,7 @@ export default {
   webpack: [
     config => {
       config.module.rules.push({
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        test: /\.(pdf|woff|woff2|eot|ttf|otf)$/,
         loader: "file-loader"
       });
       return config;

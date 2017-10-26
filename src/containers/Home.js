@@ -3,6 +3,7 @@ import { getSiteProps } from "react-static";
 import glamorous from "glamorous";
 
 import Buttons from "./home/buttons";
+import GhostButton from "./home/ghostButton";
 
 import logoImage from "../images/logo.svg";
 
@@ -12,16 +13,9 @@ const mediaQueries = {
 };
 
 const HomeContent = glamorous.div({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  height: "100%",
-  minHeight: "100%",
   "& .content": {
     marginTop: "-2em",
-    maxWidth: "100%",
     [mediaQueries.desktop]: {
-      maxWidth: "50%",
       marginTop: "0"
     },
     color: "white",
@@ -44,7 +38,7 @@ const HomeContent = glamorous.div({
       }
     },
     "& p": {
-      margin: "-1em auto 1.5em",
+      margin: "-1em auto 1em",
       maxWidth: "21em",
       fontSize: "24px"
     }
@@ -52,14 +46,20 @@ const HomeContent = glamorous.div({
 });
 
 export default getSiteProps(() => (
-  <HomeContent>
-    <div className="content loading">
+  <HomeContent className="home-wrapper">
+    <div className="content home-content">
       <img src={logoImage} alt="Heather Allard" />
       <h1>Under Construction</h1>
       <p>
         exciting stuff coming soon!<br />In the mean time, check out some of my
         work
       </p>
+      <GhostButton
+        url="https://github.com/jordond/heatherallard.ca/raw/develop/public/resume.pdf"
+        text="view resume"
+        width="100"
+        hoverColor="fe6c3d"
+      />
       <Buttons />
     </div>
   </HomeContent>
