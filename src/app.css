@@ -40,7 +40,7 @@ body {
 }
 
 .ghostButton > a {
-  color: #fff;
+  color: #fff !important;
   width: 100px;
   display: inline-block;
   padding: 8px;
