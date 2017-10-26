@@ -55,7 +55,7 @@ export default getSiteProps(() => (
         work
       </p>
       <GhostButton
-        url="https://github.com/jordond/heatherallard.ca/raw/develop/public/resume.pdf"
+        url="https://github.com/jordond/heatherallard.ca/raw/master/public/HeatherAllard-Resume.pdf"
         text="view resume"
         width="100"
         hoverColor="fe6c3d"
