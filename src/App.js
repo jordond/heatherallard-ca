@@ -1,46 +1,21 @@
-import React from "react";
-import { Router } from "react-static";
-import glamorous from "glamorous";
-import FadeIn from "react-fade-in";
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
-import Routes from "react-static-routes";
-import ReactGA from "react-ga";
-
-import "./app.css";
-
-ReactGA.initialize("UA-108609170-1");
-
-function logPageView() {
-  ReactGA.set({ page: window.location.pathname + window.location.search });
-  ReactGA.pageview(window.location.pathname + window.location.search);
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1 className="App-title">Welcome to React</h1>
+        </header>
+        <p className="App-intro">
+          To get started, edit <code>src/App.js</code> and save to reload.
+        </p>
+      </div>
+    );
+  }
 }
 
-const AppStyles = glamorous.div({
-  fontSize: "16px",
-  margin: "0",
-  padding: "0",
-  "& a": {
-    textDecoration: "none",
-    color: "#a11100"
-  },
-  "& .content": {
-    padding: "1rem"
-  }
-});
-
-const fadeIn = {
-  transition: "opacity 21s",
-  opacity: "1"
-};
-
-export default () => (
-  <Router onUpdate={logPageView}>
-    <FadeIn>
-      <AppStyles className="container" style={fadeIn}>
-        <div className="content">
-          <Routes />
-        </div>
-      </AppStyles>
-    </FadeIn>
-  </Router>
-);
+export default App;

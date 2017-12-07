@@ -21,12 +21,12 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-      - run: npm run lint
+      - run: npm run lint:css
       - run: npm test
       - run: npm run build
       - deploy:
           name: Maybe Deploy
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ] || [ "${CIRCLE_BRANCH}" == "develop" ]; then
-              ./node_modules/.bin/surge --project ./dist
+              npm run deploy
             fi

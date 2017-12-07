@@ -1,45 +1,41 @@
 {
   "name": "heatherallard-ca",
-  "version": "0.0.1",
-  "main": "index.js",
-  "license": "MIT",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "http://jordond.github.io/heatherallard-ca",
   "scripts": {
     "precommit": "lint-staged",
-    "lint": "eslint src/**/*.js",
-    "lint:fix": "npm run lint -- --fix",
-    "test": "echo 'Not Implemented, please add tests'",
-    "start": "react-static start",
-    "build": "react-static build",
-    "serve": "serve dist -p 3000"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "lint:css": "stylelint src/**/*.css --fix",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
-    "axios": "^0.16.2",
-    "glamor": "^2.20.40",
-    "glamorous": "^4.9.7",
-    "prop-types": "^15.6.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-fade-in": "^0.1.5",
-    "react-ga": "^2.3.5",
-    "react-router": "^4.2.0",
-    "react-static": "2.x.x"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.0.17"
   },
   "devDependencies": {
-    "eslint": "^4.9.0",
-    "eslint-config-prettier": "^2.6.0",
-    "eslint-config-react-tools": "1.x.x",
-    "eslint-plugin-json": "^1.2.0",
+    "eslint": "^4.12.1",
+    "eslint-config-prettier": "^2.9.0",
+    "gh-pages": "^1.1.0",
     "husky": "^0.14.3",
-    "lint-staged": "^4.3.0",
-    "prettier": "^1.7.4",
-    "serve": "^6.1.0",
-    "surge": "^0.19.0"
+    "lint-staged": "^6.0.0",
+    "prettier": "^1.9.1",
+    "stylelint": "^8.3.1",
+    "stylelint-config-prettier": "^2.0.0",
+    "stylelint-config-standard": "^18.0.0"
   },
   "lint-staged": {
-    "*.{js,json,jsx}": [
-      "eslint --fix"
+    "src/**/*.{js,json,md}": [
+      "prettier --write",
+      "git add"
     ],
-    "*.{js,json,css,scss,jsx}": [
+    "src/**/*.css": [
+      "stylelint --fix",
       "prettier --write",
       "git add"
     ]
