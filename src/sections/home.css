@@ -1,3 +1,37 @@
 .home {
   background-color: #fefefe;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 50px 1fr 50px;
+  grid-template-rows: 50px 1fr 50px;
+  grid-template-areas:
+    ". bubble ."
+    ". nameplate ."
+    ". slogan .";
+}
+
+.speech-bubble {
+  grid-area: bubble;
+  width: 30%;
+  display: block;
+  max-width: 250px;
+  margin: 0 0 -50px 25px;
+}
+
+.nameplate {
+  grid-area: nameplate;
+  max-width: 600px;
+}
+
+.slogan {
+  grid-area: slogan;
+  margin-top: -10px;
+}
+
+.slogan p {
+  text-align: center;
+  margin: 0;
+  font-size: 1.5rem;
+  font-family: Nunito Sans, sans-serif;
+  font-weight: 300;
 }

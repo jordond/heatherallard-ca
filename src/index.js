@@ -6,6 +6,4 @@ import registerServiceWorker from "./registerServiceWorker";
 
 ReactDOM.render(<App />, document.getElementById("root"));
 
-if (process.env.NODE_ENV !== "development") {
-  registerServiceWorker();
-}
+registerServiceWorker();
