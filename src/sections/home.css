@@ -1,13 +1,17 @@
 .home {
   background-color: #fefefe;
-
-  /* display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
-  grid-template-rows: 4fr 4fr 4fr;
-  align-items: center; */
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 50px 1fr 50px;
+  grid-template-rows: 50px 1fr 50px;
+  grid-template-areas:
+    ". bubble ."
+    ". nameplate ."
+    ". slogan .";
 }
 
 .speech-bubble {
+  grid-area: bubble;
   width: 30%;
   display: block;
   max-width: 250px;
@@ -15,7 +19,13 @@
 }
 
 .nameplate {
+  grid-area: nameplate;
   max-width: 600px;
+}
+
+.slogan {
+  grid-area: slogan;
+  margin-top: -10px;
 }
 
 .slogan p {
