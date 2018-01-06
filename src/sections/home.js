@@ -7,8 +7,10 @@ import "./home.css";
 
 export default () => (
   <div className="home">
-    <img className="speech-bubble" src={imgSpeechBubble} alt="Hello!" />
-    <img className="nameplate" src={imgNamePlate} alt="Heather Allard" />
+    <div className="nameplate">
+      <img className="bubble" src={imgSpeechBubble} alt="Hello!" />
+      <img className="logo" src={imgNamePlate} alt="Heather Allard" />
+    </div>
     <div className="slogan">
       <p>
         eat. design. adventure. repeat.

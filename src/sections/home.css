@@ -2,25 +2,23 @@
   background-color: #fefefe;
   display: grid;
   justify-items: center;
-  grid-template-columns: 50px 1fr 50px;
-  grid-template-rows: 50px 1fr 50px;
+  grid-template-columns: 30px 1fr 30px;
+  grid-template-rows: 1fr 50px;
   grid-template-areas:
-    ". bubble ."
     ". nameplate ."
     ". slogan .";
 }
 
-.speech-bubble {
-  grid-area: bubble;
-  width: 30%;
-  display: block;
-  max-width: 250px;
-  margin: 0 0 -50px 25px;
-}
-
 .nameplate {
   grid-area: nameplate;
-  max-width: 600px;
+}
+
+.nameplate .bubble {
+  max-width: 150px;
+}
+
+.nameplate .logo {
+  width: 100%;
 }
 
 .slogan {
@@ -32,6 +30,20 @@
   text-align: center;
   margin: 0;
   font-size: 1.5rem;
-  font-family: Nunito Sans, sans-serif;
   font-weight: 300;
+}
+
+@media all and (min-width: 1024px) {
+  .home {
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: 20px 2fr 1fr;
+    grid-template-areas:
+      ". bubble . ."
+      ". nameplate nameplate ."
+      ". slogan slogan .";
+  }
+
+  .speech-bubble {
+    width: 100%;
+  }
 }
