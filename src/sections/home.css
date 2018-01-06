@@ -1,0 +1,49 @@
+.home {
+  background-color: #fefefe;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 30px 1fr 30px;
+  grid-template-rows: 1fr 50px;
+  grid-template-areas:
+    ". nameplate ."
+    ". slogan .";
+}
+
+.nameplate {
+  grid-area: nameplate;
+}
+
+.nameplate .bubble {
+  max-width: 150px;
+}
+
+.nameplate .logo {
+  width: 100%;
+}
+
+.slogan {
+  grid-area: slogan;
+  margin-top: -10px;
+}
+
+.slogan p {
+  text-align: center;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+@media all and (min-width: 1024px) {
+  .home {
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: 20px 2fr 1fr;
+    grid-template-areas:
+      ". bubble . ."
+      ". nameplate nameplate ."
+      ". slogan slogan .";
+  }
+
+  .speech-bubble {
+    width: 100%;
+  }
+}
