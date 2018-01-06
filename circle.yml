@@ -27,6 +27,6 @@ jobs:
       - deploy:
           name: Maybe Deploy
           command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ] || [ "${CIRCLE_BRANCH}" == "develop" ]; then
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
               npm run deploy
             fi
