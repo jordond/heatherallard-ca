@@ -7,6 +7,7 @@ import registerServiceWorker from "./utils/registerServiceWorker";
 import Nav from "./nav";
 import Home from "./sections/home";
 import Features from "./sections/features";
+import Footer from "./sections/footer";
 
 import "./app.css";
 
@@ -17,6 +18,7 @@ const App = () => (
     <Nav links={links.map(text => ({ dest: `/#${text}`, text }))} />
     <Home />
     <Features />
+    <Footer />
   </div>
 );
 

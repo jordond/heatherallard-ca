@@ -1,5 +1,7 @@
 {
   "editor.formatOnSave": true,
   "eslint.enable": true,
-  "emmet.syntaxProfiles": { "javascript": "jsx" }
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx"
+  }
 }
