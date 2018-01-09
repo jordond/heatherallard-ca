@@ -1,59 +1,73 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-export default class ContactForm extends React.Component {
+import { sendEmail } from "./formspree";
+
+class ContactForm extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = { email: "", message: "" };
 
+    this.attributeMaker = this.attributeMaker.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange({ target }) {
-    const { name } = target;
+  attributeMaker(name) {
+    return {
+      name,
+      className: name,
+      placeholder: name,
+      onChange: this.handleChange
+    };
+  }
 
-    this.setState({ [name]: target.value });
+  handleChange({ target }) {
+    this.setState({ [target.name]: target.value });
   }
 
   handleSubmit(event) {
     const { email, message } = this.state;
     if (email && message) {
-      console.log(`Submitted: ${email} -> ${message}`);
+      console.log(`Attempting to submit: ${email} ->\n${message}`);
       this.setState({ email: "", message: "" });
-      if (process.env.NODE_ENV === "production") {
-        console.log("TODO -> Implement email sending");
-      }
+
+      sendEmail({ email, message, sendTo: this.props.email }).then(res => {
+        if (res) {
+          console.info("Email sent successfully!");
+        }
+      });
     }
     event.preventDefault();
   }
 
   render() {
     return (
-      <div className="form">
+      <form className="contact-form" onSubmit={this.handleSubmit}>
         <input
-          name="email"
           type="email"
-          className="email"
-          placeholder="email"
           value={this.state.email}
-          onChange={this.handleChange}
+          {...this.attributeMaker("email")}
         />
         <textarea
-          name="message"
-          className="message"
-          placeholder="message"
           value={this.state.message}
-          onChange={this.handleChange}
+          {...this.attributeMaker("message")}
         />
         <button
           className="submit"
-          onClick={this.handleSubmit}
+          type="submit"
           disabled={!this.state.email || !this.state.message}
         >
           send
         </button>
-      </div>
+      </form>
     );
   }
 }
+
+ContactForm.protoTypes = {
+  email: PropTypes.string.isRequired
+};
+
+export default ContactForm;

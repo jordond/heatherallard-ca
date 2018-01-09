@@ -2,14 +2,17 @@
   "extends": ["airbnb", "prettier"],
   "rules": {
     "react/jsx-filename-extension": 0,
+    "react/prop-types": 0,
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
     "import/no-named-as-default": 0,
+    "import/prefer-default-export": 0,
     "linebreak-style": 0,
     "no-console": 0
   },
   "globals": {
     "document": true,
     "it": true,
-    "desc": true
+    "desc": true,
+    "fetch": true
   }
 }

@@ -30,7 +30,7 @@ const Footer = () => (
     </div>
     <div className="contact">
       or send a message.
-      <ContactForm />
+      <ContactForm email="jordon.dehoog@gmail.com" />
     </div>
     <div className="links">
       <ul>
