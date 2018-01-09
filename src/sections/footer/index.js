@@ -21,7 +21,7 @@ const links = [
   { img: imgVimeo, url: "https://vimeo.com/heatherallard" }
 ];
 
-export default () => (
+const Footer = () => (
   <div className="footer">
     <div className="text">Interested? Let&apos;s talk!</div>
     <div className="email">
@@ -43,3 +43,5 @@ export default () => (
     </div>
   </div>
 );
+
+export default Footer;

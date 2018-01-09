@@ -6,7 +6,7 @@ import imgNamePlate from "../images/home-nameplate.svg";
 
 import "./home.css";
 
-export default () => (
+const Home = () => (
   <div className="home">
     <div className="nameplate">
       <img className="bubble" src={imgSpeechBubble} alt="Hello!" />
@@ -32,3 +32,5 @@ export default () => (
     </div>
   </div>
 );
+
+export default Home;

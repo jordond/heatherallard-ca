@@ -30,8 +30,10 @@ const features = [
   }
 ];
 
-export default () => (
+const Features = () => (
   <div className="features">
     {features.map(feat => <Feature {...key()} {...feat} />)}
   </div>
 );
+
+export default Features;

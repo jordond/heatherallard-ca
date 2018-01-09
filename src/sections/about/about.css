@@ -1,0 +1,7 @@
+div.about {
+  background-image: url("./bg-about.png");
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-color: #78cbc1;
+  color: white;
+}
