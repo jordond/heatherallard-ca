@@ -1,0 +1,17 @@
+.features {
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.features::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  z-index: -1;
+  background: url("../../images/backgrounds/features.png") 0 0 repeat;
+  transform: rotate(90deg);
+}

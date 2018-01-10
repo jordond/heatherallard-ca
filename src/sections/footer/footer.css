@@ -1,0 +1,12 @@
+.footer {
+  background-color: #78cbc1;
+}
+
+.links ul {
+  list-style: none;
+  margin: 0;
+}
+
+.links ul li {
+  display: inline;
+}

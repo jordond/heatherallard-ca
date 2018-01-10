@@ -7,6 +7,8 @@ import imgMotion from "../../images/feature-motion.png";
 import imgDesign from "../../images/feature-design.png";
 import imgAdventure from "../../images/feature-adventure.png";
 
+import "./features.css";
+
 const features = [
   {
     icon: imgMotion,
@@ -28,8 +30,10 @@ const features = [
   }
 ];
 
-export default () => (
+const Features = () => (
   <div className="features">
     {features.map(feat => <Feature {...key()} {...feat} />)}
   </div>
 );
+
+export default Features;

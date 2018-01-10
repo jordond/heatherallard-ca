@@ -1,9 +1,34 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import App from "./app";
-import registerServiceWorker from "./registerServiceWorker";
+import registerServiceWorker from "./utils/registerServiceWorker";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+// Components
+import Nav from "./nav";
+import Home from "./sections/home";
+import Features from "./sections/features";
+import About from "./sections/about";
+import Adventures from "./sections/adventures";
+import Footer from "./sections/footer";
 
-registerServiceWorker();
+import "./app.css";
+
+const links = ["about", "work", "contact"];
+
+const App = () => (
+  <div className="site">
+    <Nav links={links.map(text => ({ dest: `/#${text}`, text }))} />
+    <Home />
+    <Features />
+    <About />
+    <Adventures />
+    <Footer />
+  </div>
+);
+
+export default App;
+
+if (process.env.NODE_ENV !== "test") {
+  ReactDOM.render(<App />, document.getElementById("root"));
+  registerServiceWorker();
+}
