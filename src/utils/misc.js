@@ -3,3 +3,5 @@ export function encodeObjectForFetch(data) {
     .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
     .join("&");
 }
+
+export function noop() {}

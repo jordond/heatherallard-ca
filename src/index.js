@@ -8,6 +8,7 @@ import Nav from "./nav";
 import Home from "./sections/home";
 import Features from "./sections/features";
 import About from "./sections/about";
+import Works from "./sections/works";
 import Adventures from "./sections/adventures";
 import Footer from "./sections/footer";
 
@@ -21,6 +22,7 @@ const App = () => (
     <Home />
     <Features />
     <About />
+    <Works />
     <Adventures />
     <Footer />
   </div>
