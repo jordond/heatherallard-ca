@@ -28,5 +28,7 @@ const App = () => (
 
 export default App;
 
-ReactDOM.render(<App />, document.getElementById("root"));
-registerServiceWorker();
+if (process.env.NODE_ENV !== "test") {
+  ReactDOM.render(<App />, document.getElementById("root"));
+  registerServiceWorker();
+}
