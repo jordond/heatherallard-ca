@@ -17,7 +17,7 @@ const links = ["about", "work", "contact"];
 
 const App = () => (
   <div className="site">
-    <Nav links={links.map(text => ({ dest: `/#${text}`, text }))} />
+    <Nav links={links.map(text => ({ dest: `#${text}`, text }))} />
     <Home />
     <Features />
     <About />

@@ -22,7 +22,7 @@ const links = [
 ];
 
 const Footer = () => (
-  <div className="footer">
+  <div id="contact" className="footer">
     <div className="text">Interested? Let&apos;s talk!</div>
     <div className="email">
       <span>email</span>

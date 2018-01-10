@@ -4,7 +4,7 @@ import imgAvatar from "../../images/about-avatar.png";
 import "./about.css";
 
 const About = () => (
-  <div className="about">
+  <div id="about" className="about">
     <div className="header">
       <div className="avatar">
         <img src={imgAvatar} alt="Heather Allard" />
