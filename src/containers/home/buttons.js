@@ -8,9 +8,10 @@ import behanceImage from "../../images/Behance.png";
 
 const Buttons = glamorous.ul({
   listStyleType: "none",
+  padding: 0,
   "& li": {
     display: "inline-block",
-    paddingRight: "1em"
+    padding: "0 0.5em 0 0.5em"
   }
 });
 
