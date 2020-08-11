@@ -5,8 +5,6 @@ import glamorous from "glamorous";
 import Buttons from "./home/buttons";
 import GhostButton from "./home/ghostButton";
 
-import logoImage from "../images/logo.svg";
-
 const mediaQueries = {
   phone: "@media only screen and (max-width: 400px)",
   desktop: "@media screen and (min-width: 900px)"
@@ -48,12 +46,7 @@ const HomeContent = glamorous.div({
 export default getSiteProps(() => (
   <HomeContent className="home-wrapper">
     <div className="content home-content">
-      <img src={logoImage} alt="Heather Allard" />
-      <h1>Under Construction</h1>
-      <p>
-        exciting stuff coming soon!<br />In the mean time, check out some of my
-        work
-      </p>
+      <h1>Heather Allard</h1>
       <GhostButton
         url="https://github.com/jordond/heatherallard.ca/raw/master/public/HeatherAllard-Resume.pdf"
         text="view resume"
