@@ -13,7 +13,7 @@
     "serve": "serve dist -p 3000"
   },
   "dependencies": {
-    "axios": "^0.16.2",
+    "axios": "^0.21.1",
     "glamor": "^2.20.40",
     "glamorous": "^4.9.7",
     "prop-types": "^15.6.0",
